@@ -9,6 +9,7 @@ Summary(pl):	%{_pearname} - graficzny instalator PEAR oparty na PHP-Gtk2
 Name:		php-pear-%{_pearname}
 Version:	0.1.0
 Release:	1
+Epoch:		0
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -42,7 +43,7 @@ Aplikacji PHP (PHP Extension and Application Repository). Korzysta z
 PHP-Gtk2 jako graficznego toolkitu i pozwala na ³atwe przegl±danie
 dostêpnych pakietów i ich instalacje na komputerze.
 
-Program zota³ zaprojektowany z my¶l± o u¿ytkowniku koñcowym, proces
+Program zosta³ zaprojektowany z my¶l± o u¿ytkowniku koñcowym, proces
 instalacji i deinstalacji zosta³ w mo¿liwie najwiêkszym stopniu
 uproszczony.
 
