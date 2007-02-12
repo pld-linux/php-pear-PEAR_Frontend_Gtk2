@@ -5,7 +5,7 @@
 %define		_pearname	PEAR_Frontend_Gtk2
 
 Summary:	%{_pearname} - graphical PEAR installer based on PHP-Gtk2
-Summary(pl):	%{_pearname} - graficzny instalator PEAR oparty na PHP-Gtk2
+Summary(pl.UTF-8):   %{_pearname} - graficzny instalator PEAR oparty na PHP-Gtk2
 Name:		php-pear-%{_pearname}
 Version:	0.1.2
 Release:	2
@@ -38,21 +38,21 @@ possible to install and uninstall programs.
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
-Program ten to graficzny frontend do PEAR, Repozytorium Rozszerzeñ i
+%description -l pl.UTF-8
+Program ten to graficzny frontend do PEAR, Repozytorium RozszerzeÅ„ i
 Aplikacji PHP (PHP Extension and Application Repository). Korzysta z
-PHP-Gtk2 jako graficznego toolkitu i pozwala na ³atwe przegl±danie
-dostêpnych pakietów i ich instalacje na komputerze.
+PHP-Gtk2 jako graficznego toolkitu i pozwala na Å‚atwe przeglÄ…danie
+dostÄ™pnych pakietÃ³w i ich instalacje na komputerze.
 
-Program zosta³ zaprojektowany z my¶l± o u¿ytkowniku koñcowym, proces
-instalacji i deinstalacji zosta³ w mo¿liwie najwiêkszym stopniu
+Program zostaÅ‚ zaprojektowany z myÅ›lÄ… o uÅ¼ytkowniku koÅ„cowym, proces
+instalacji i deinstalacji zostaÅ‚ w moÅ¼liwie najwiÄ™kszym stopniu
 uproszczony.
 
 Ta klasa ma w PEAR status: %{_status}.
 
 %package tests
 Summary:	Tests for PEAR::%{_pearname}
-Summary(pl):	Testy dla PEAR::%{_pearname}
+Summary(pl.UTF-8):   Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 AutoReq:	no
@@ -61,7 +61,7 @@ AutoProv:	no
 %description tests
 Tests for PEAR::%{_pearname}.
 
-%description tests -l pl
+%description tests -l pl.UTF-8
 Testy dla PEAR::%{_pearname}.
 
 %prep
