@@ -5,7 +5,7 @@
 %define		_pearname	PEAR_Frontend_Gtk2
 
 Summary:	%{_pearname} - graphical PEAR installer based on PHP-Gtk2
-Summary(pl.UTF-8):   %{_pearname} - graficzny instalator PEAR oparty na PHP-Gtk2
+Summary(pl.UTF-8):	%{_pearname} - graficzny instalator PEAR oparty na PHP-Gtk2
 Name:		php-pear-%{_pearname}
 Version:	0.1.2
 Release:	2
@@ -52,7 +52,7 @@ Ta klasa ma w PEAR status: %{_status}.
 
 %package tests
 Summary:	Tests for PEAR::%{_pearname}
-Summary(pl.UTF-8):   Testy dla PEAR::%{_pearname}
+Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 AutoReq:	no
