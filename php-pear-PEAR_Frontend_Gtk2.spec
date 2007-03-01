@@ -1,19 +1,19 @@
 %include	/usr/lib/rpm/macros.php
 %define		_class		PEAR
 %define		_subclass	Frontend_Gtk2
-%define		_status		beta
+%define		_status		stable
 %define		_pearname	PEAR_Frontend_Gtk2
 
 Summary:	%{_pearname} - graphical PEAR installer based on PHP-Gtk2
 Summary(pl):	%{_pearname} - graficzny instalator PEAR oparty na PHP-Gtk2
 Name:		php-pear-%{_pearname}
-Version:	0.1.2
-Release:	2
+Version:	1.0.0
+Release:	1
 Epoch:		0
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	f53e1eef11b345ab30534aa6306244d7
+# Source0-md5:	9dfbf04e47e1ac4336b67f37791194b5
 URL:		http://pear.php.net/package/PEAR_Frontend_Gtk2/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -23,7 +23,8 @@ Requires:	php(gtk2)
 Requires:	php-pear
 Requires:	php-pear-Config >= 1.10.4
 Requires:	php-pear-Gtk2_EntryDialog >= 0.0.3
-Requires:	php-pear-PEAR >= 1:1.4.-0.5
+Requires:	php-pear-Gtk2_FileDrop >= 0.1.0
+Requires:	php-pear-PEAR >= 1:1.4.5
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
