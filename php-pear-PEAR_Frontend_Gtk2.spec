@@ -8,7 +8,7 @@ Summary:	%{_pearname} - graphical PEAR installer based on PHP-Gtk2
 Summary(pl.UTF-8):	%{_pearname} - graficzny instalator PEAR oparty na PHP-Gtk2
 Name:		php-pear-%{_pearname}
 Version:	1.0.0
-Release:	1
+Release:	2
 Epoch:		0
 License:	LGPL
 Group:		Development/Languages/PHP
@@ -68,6 +68,10 @@ Testy dla PEAR::%{_pearname}.
 %prep
 %pear_package_setup
 
+# pear/tests/pearname/tests -> pear/tests/pearname
+install -d ./%{php_pear_dir}/tests/%{_pearname}
+mv ./%{php_pear_dir}/{%{_class}/Frontend/tests/*,tests/%{_pearname}}
+
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}
@@ -85,8 +89,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %files tests
 %defattr(644,root,root,755)
-%{php_pear_dir}/PEAR/Frontend/tests/ConfigTest.php
-%{php_pear_dir}/PEAR/Frontend/tests/ExpanderTest.phpw
-%{php_pear_dir}/PEAR/Frontend/tests/PackageTest.php
-%{php_pear_dir}/PEAR/Frontend/tests/runtests.php
-%{php_pear_dir}/PEAR/Frontend/tests/TimeDiff.php
+%{php_pear_dir}/tests/*
