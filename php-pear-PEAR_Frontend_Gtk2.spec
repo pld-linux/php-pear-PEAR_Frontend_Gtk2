@@ -8,18 +8,17 @@ Summary:	%{_pearname} - graphical PEAR installer based on PHP-Gtk2
 Summary(pl.UTF-8):	%{_pearname} - graficzny instalator PEAR oparty na PHP-Gtk2
 Name:		php-pear-%{_pearname}
 Version:	1.0.1
-Release:	1
+Release:	2
 Epoch:		0
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	777fab5bc424ac5d1cc9d9a7e5c2636c
 URL:		http://pear.php.net/package/PEAR_Frontend_Gtk2/
-BuildRequires:	php-pear-PEAR
+BuildRequires:	php-pear-PEAR >= 1:1.4.5
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
-Requires:	php(dom)
-Requires:	php(gtk2)
+Requires:	php-gtk2
 Requires:	php-pear
 Requires:	php-pear-Config >= 1.10.4
 Requires:	php-pear-Gtk2_EntryDialog >= 0.0.3
@@ -56,8 +55,8 @@ Summary:	Tests for PEAR::%{_pearname}
 Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
 Requires:	%{name} = %{epoch}:%{version}-%{release}
-AutoReq:	no
 AutoProv:	no
+AutoReq:	no
 
 %description tests
 Tests for PEAR::%{_pearname}.
