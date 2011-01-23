@@ -24,6 +24,7 @@ Requires:	php-pear-Config >= 1.10.4
 Requires:	php-pear-Gtk2_EntryDialog >= 0.0.3
 Requires:	php-pear-Gtk2_FileDrop >= 0.1.0
 Requires:	php-pear-PEAR >= 1:1.4.5
+Obsoletes:	php-pear-PEAR_Frontend_Gtk2-tests
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -50,20 +51,6 @@ uproszczony.
 
 Ta klasa ma w PEAR status: %{_status}.
 
-%package tests
-Summary:	Tests for PEAR::%{_pearname}
-Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
-Group:		Development/Languages/PHP
-Requires:	%{name} = %{epoch}:%{version}-%{release}
-AutoProv:	no
-AutoReq:	no
-
-%description tests
-Tests for PEAR::%{_pearname}.
-
-%description tests -l pl.UTF-8
-Testy dla PEAR::%{_pearname}.
-
 %prep
 %pear_package_setup
 
@@ -85,7 +72,3 @@ rm -rf $RPM_BUILD_ROOT
 %{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/PEAR/Frontend/Gtk2
 %{php_pear_dir}/PEAR/Frontend/Gtk2.php
-
-%files tests
-%defattr(644,root,root,755)
-%{php_pear_dir}/tests/*
