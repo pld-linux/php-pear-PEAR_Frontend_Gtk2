@@ -1,23 +1,19 @@
+%define		status		stable
+%define		pearname	PEAR_Frontend_Gtk2
 %include	/usr/lib/rpm/macros.php
-%define		_class		PEAR
-%define		_subclass	Frontend_Gtk2
-%define		_status		stable
-%define		_pearname	PEAR_Frontend_Gtk2
-
-Summary:	%{_pearname} - graphical PEAR installer based on PHP-Gtk2
-Summary(pl.UTF-8):	%{_pearname} - graficzny instalator PEAR oparty na PHP-Gtk2
-Name:		php-pear-%{_pearname}
-Version:	1.0.1
-Release:	3
-Epoch:		0
+Summary:	%{pearname} - graphical PEAR installer based on PHP-Gtk2
+Summary(pl.UTF-8):	%{pearname} - graficzny instalator PEAR oparty na PHP-Gtk2
+Name:		php-pear-%{pearname}
+Version:	1.1.0
+Release:	1
 License:	LGPL
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	777fab5bc424ac5d1cc9d9a7e5c2636c
+Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
+# Source0-md5:	2c354fd4a92750e440a1d58c95102d7d
 URL:		http://pear.php.net/package/PEAR_Frontend_Gtk2/
 BuildRequires:	php-pear-PEAR >= 1:1.4.5
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
-BuildRequires:	rpmbuild(macros) >= 1.300
+BuildRequires:	rpmbuild(macros) >= 1.580
 Requires:	php-gtk2
 Requires:	php-pear
 Requires:	php-pear-Config >= 1.10.4
@@ -37,7 +33,7 @@ computer.
 The program is designed to be used by end-users, making it as easy as
 possible to install and uninstall programs.
 
-In PEAR status of this package is: %{_status}.
+In PEAR status of this package is: %{status}.
 
 %description -l pl.UTF-8
 Program ten to graficzny frontend do PEAR, Repozytorium Rozszerzeń i
@@ -49,14 +45,10 @@ Program został zaprojektowany z myślą o użytkowniku końcowym, proces
 instalacji i deinstalacji został w możliwie największym stopniu
 uproszczony.
 
-Ta klasa ma w PEAR status: %{_status}.
+Ta klasa ma w PEAR status: %{status}.
 
 %prep
 %pear_package_setup
-
-# pear/tests/pearname/tests -> pear/tests/pearname
-install -d ./%{php_pear_dir}/tests/%{_pearname}
-mv ./%{php_pear_dir}/{%{_class}/Frontend/tests/*,tests/%{_pearname}}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -72,3 +64,4 @@ rm -rf $RPM_BUILD_ROOT
 %{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/PEAR/Frontend/Gtk2
 %{php_pear_dir}/PEAR/Frontend/Gtk2.php
+%{php_pear_dir}/data/PEAR_Frontend_Gtk2
