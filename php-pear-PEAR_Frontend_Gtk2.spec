@@ -1,6 +1,5 @@
 %define		status		stable
 %define		pearname	PEAR_Frontend_Gtk2
-%include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - graphical PEAR installer based on PHP-Gtk2
 Summary(pl.UTF-8):	%{pearname} - graficzny instalator PEAR oparty na PHP-Gtk2
 Name:		php-pear-%{pearname}
